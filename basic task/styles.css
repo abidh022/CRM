@@ -1,0 +1,26 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    height: auto;
+}
+
+input{
+    margin-right: 20px;
+    padding: 5px;
+    height: 30px;
+}
+
+button{
+    padding: 10px;
+}
+
+#result ,#checkNumberResult,#areaResult,#simResult{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#principal,#rate,#time{
+    margin-top: 10px;
+    margin-bottom:10px;
+    
+}

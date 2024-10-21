@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <input type="text" id="arrayInput" placeholder="eg.10,20,30,5,1,44">
+    <button onclick="findMax()" > Find Max</button>
+    <p id="result" ></p>
+
+    <input type="number" id="checkNumber" placeholder="enter a number">
+    <button onclick="checkNumber()" >Check number even or odd </button>
+    <p id="checkNumberResult"></p>
+
+    <input type="text" id="findarea" placeholder="enter number">
+    <button onclick="findArea()" > Find area of circle</button>
+    <p id="areaResult" ></p>
+
+    <input type="text" id="table" placeholder="enter multiplication number">
+    <button onclick="mulTable()" > Multiplication table</button>
+    <p id="tableResult" ></p>
+
+    <input type="number" id="principal" placeholder="enter principal"><br>
+    <input type="number" id="rate" placeholder="enter rate"><br>
+    <input type="number" id="time" placeholder="enter time"><br>
+    <button onclick="simpleInterest()" >Result</button>
+    <P id="simResult" ></P>
+
+    <input type="number" id="checkleap" placeholder="Enter year">
+    <button onclick="checkLeap()">Check Leap</button>
+    <p id="leapResult"></p>
+
+    <input type="number" id="factorial" placeholder="Enter a number">
+    <button onclick="checkFactorial()">Check Factorial</button>
+    <p id="factorialResult"></p>
+
+    <input type="text" id="palindrome" placeholder="Enter a string">
+    <button onclick="checkPalindrome()">Check palindrome</button>
+    <p id="palindromeResult"></p>
+
+    <input type="number" id="temp" placeholder="Enter temprature">
+    <select id="unit">
+        <option value="celsius">Celcius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="kelvin">Kelvin</option>
+    </select> <br>
+    <button onclick="convertTemp()" >Convert</button>
+    <p id="tempResult" ></p>
+
+    <p>FizzBuzz Program</p>
+    <button onclick="fizzBuzz()">Run FizzBuzz</button>
+    <p id="fizzresult"></p>
+
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkPrime()">Check Prime</button>
+    <p id="primeResult"></p>
+
+    <input type="number" id="len" placeholder="Enter lenght">
+    <input type="number" id="wid" placeholder="Enter width">
+    
+    <button onclick="calculateRectangle()">Rectangle</button>
+    <p id="areaResult"></p>
+    <p id="perimeterResult"></p>
+
+    <input type="text" id="str1" placeholder="string 1">
+    <input type="text" id="str2" placeholder="string 2">
+    <button onclick="anagram()" >Anagram Check</button>
+    <p id="anagramResult"></p>
+
+    <input type="number" id="fiboo" placeholder="Fibonocci" min="1">
+    <button onclick="fibonacci()">Result</button>
+    <p id="fiboRes"></p>
+
+    <input type="text" id="revInput" placeholder="Reverse a string" >
+    <button onclick="reversee()">Reverse</button>
+    <p id="revRes"></p>
+
+    <input type="text" id="count" placeholder="Count Characters in a String" >
+    <button onclick="charCount()">Count</button>
+    <p id="charRes"></p>
+
+    <input type="text" id="binaryarr" placeholder="Enter a array" >
+    <input type="number" id="searchkey" placeholder="Enter a search key" >
+    <button onclick="binarySearch()">binary search</button>
+    <p id="binaryRes"></p>
+
+    <form id="gradeForm">
+        <label for="math">Math:</label>
+        <input type="number" id="math" required><br>
+        <label for="science">Science:</label>
+        <input type="number" id="science" required><br>
+        <label for="english">English:</label>
+        <input type="number" id="english" required><br>
+        <label for="history">History:</label>
+        <input type="number" id="history" required><br>
+        <button type="submit">Calculate Grade</button>
+    </form>
+    
+    <h2 id="result"></h2>
+</body>
+</html>
