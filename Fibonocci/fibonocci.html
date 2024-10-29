@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 400px;
+            text-align: center;
+        }
+        input[type="number"] {
+            text-align: center;
+            padding: 10px;
+            width: 93%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            background-color: #28a745;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #e7f3fe;
+            color: #31708f;
+            border: 1px solid #b3e5fc;
+            display: inline-block;
+            width: 95%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Fibonacci Series</h2> <!-- Added heading -->
+        <input type="number" id="fiboo" placeholder="Enter a number" min="1">
+        <button onclick="fibonacci()">Generate</button>
+        <p id="fiboRes" class="result"></p>
+    </div>
+    <script>
+        document.getElementById('fiboo').addEventListener('input', function() {
+            document.getElementById('fiboRes').innerText = ''; // Clear result on input change
+        });
+
+        function fibonacci() {
+            const n = parseInt(document.getElementById('fiboo').value);
+            if (isNaN(n) || n < 1) {
+                document.getElementById('fiboRes').innerText = 'Please enter a positive integer.'; // Input validation
+                return;
+            }
+
+            let fib = [];
+            let a = 0, b = 1;
+            for (let i = 0; i < n; i++) {
+                fib.push(a);
+                const next = a + b;
+                a = b;
+                b = next;
+            }
+            document.getElementById('fiboRes').innerText = `Fibonacci sequence: ${fib.join(', ')}`;
+        }       
+    </script>
+</body>
+</html>
