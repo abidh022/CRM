@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+   
+}
+#title{
+    max-width: fit-content;
+    margin: 0;
+    padding: 9px;
+}
+.form-input,
+.dob,
+.phn,
+.add,
+.pass,
+.forgot-password-form
+ {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px auto;
+    max-width: 400px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+    margin: 10px auto;
+    max-width: 400px;
+    padding: 15px;
+}
+
+h3, h4 {
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+#cnfmpassword,
+select {
+    width: 60%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.forgot-password-form{
+    width: 60%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-direction: column;
+}
+
+
+#month,
+#date,
+#year{
+    width: fit-content;
+}
+
+input:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(58, 108, 244);
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 500ms;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.info {
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#loginemail,#loginpassword{
+    max-width: 300px;
+}
+

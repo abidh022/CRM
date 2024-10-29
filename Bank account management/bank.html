@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Ellie's Bank</h2>
+        <input type="email" id="loginemail" placeholder="Email" required>
+        <input type="password" id="loginpassword" placeholder="Password">
+        <button id="loginBtn">Login</button>
+        <h5>Don't have an account? Click below</h5>
+        <button id="createnewacct" onclick="showAccountForm()">Create New Account</button><br>
+        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+
+    </div>
+
+    <div class="forcreatingnew hidden">
+        <div class="form-input">
+            <h4>Name</h4>
+            <select id="title">
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Ms.</option>
+            </select>
+            <input type="text" id="first" placeholder="First Name" required>
+            <input type="text" id="last" placeholder="Last Name" required>
+        </div>
+
+        <div class="dob">
+            <h3>Date of Birth</h3>
+            <select id="month">
+                <option value="" disabled selected>Select Month</option>
+                <option>Jan</option>
+                <option>Feb</option>
+                <option>Mar</option>
+                <option>Apr</option>
+                <option>May</option>
+                <option>Jun</option>
+                <option>Jul</option>
+                <option>Aug</option>
+                <option>Sep</option>
+                <option>Oct</option>
+                <option>Nov</option>
+                <option>Dec</option>
+            </select>
+            <select id="date">
+                <option value="" disabled selected>Select Date</option>
+                <script>
+                    for (let i = 1; i <= 31; i++) {
+                        document.write(`<option>${i}</option>`);
+                    }
+                </script>
+            </select>
+            <select id="year">
+                <option value="" disabled selected>Select Year</option>
+                <script>
+                    const currentYear = new Date().getFullYear();
+                    for (let year = currentYear; year >= 1950; year--) {
+                        document.write(`<option>${year}</option>`);
+                    }
+                </script>
+            </select>
+        </div>
+
+        <div class="phn">
+            <h3>Phone Number</h3>
+            <input type="tel" id="phn" placeholder="Enter Phone Number" required>
+        </div>
+        <div class="phn">
+            <h3>Email</h3>
+            <input type="email" id="email" placeholder="Enter Email" required>
+        </div>
+
+        <div class="add">
+            <h4>Address</h4>
+            <input type="text" id="address" placeholder="Enter Address" required>
+        </div>
+
+        <div class="pass">
+            <h4>Password</h4>
+            <input type="password" id="password" placeholder="Enter password">
+            <input type="password" id="cnfmpassword" placeholder="Confirm password"><br>
+            <input type="checkbox" id="toggleButton"><label for="toggleButton" style="font-size: 0.7em; display: inline;"> Show Password</label>
+        </div>
+        
+        <div class="action-buttons">
+            <button id="saveAccountBtn">Save Account</button>
+        </div>
+    </div>
+
+    <div class="info hidden" id="accountInfo"></div>
+
+    <div class="transaction-buttons hidden">
+        <button id="depositBtn">Deposit Money</button>
+        <button id="withdrawBtn">Withdraw Money</button>
+        <button id="checkBalanceBtn">Check Balance</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <div class="transaction-input hidden">
+        <input type="number" id="transactionAmount" placeholder="Enter Amount" />
+        <button id="confirmTransactionBtn">Confirm</button>
+    </div>
+
+    <div class="forgot-password-form hidden">
+        <input type="email" id="forgotEmail" placeholder="Enter your email">
+        <input type="password" id="newPassword" placeholder="New Password">
+        <input type="password" id="confirmNewPassword" placeholder="Confirm New Password">
+        <button id="resetPasswordBtn">Reset Password</button>
+        <button id="cancelResetBtn">Cancel</button>
+      </div>
+      
+</body>     
+</html>
