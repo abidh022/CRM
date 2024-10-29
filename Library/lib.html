@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Book Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Library Book Manager</h1>
+        
+        <div class="form-group">
+            <input type="text" id="bookTitle" placeholder="Enter Book Title" required>
+            <button id="addBookBtn">Add Book</button>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="searchBook" placeholder="Search for a Book" oninput="searchBook()">
+        </div>
+
+        <ul id="bookList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
